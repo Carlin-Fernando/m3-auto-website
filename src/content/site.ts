@@ -9,7 +9,7 @@ export const site = {
   ],
   whatsapp: "https://wa.me/94767637137",
   displayEmail: "m3auto.lk@gmail.com",
-  inquiryEmail: "m3autogms@gmail.com",
+  inquiryEmail: "m3auto.lk@gmail.com",
   hours: "Mon–Sat, 9:00 AM – 7:00 PM",
   socials: {
     facebook: "https://www.facebook.com/share/1BhUdyxBxR/",

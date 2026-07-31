@@ -226,7 +226,6 @@ export const goodsCategories: GoodsCategory[] = [
         "key": "VALVOLINE",
         "items": [
           "VALVOLINE 880911 - 15W-40 / 5L DIESEL MOTOR OIL",
-          "VALVOLINE 881097 - 15W-40 / 1L FREE",
           "VALVOLINE 881097 - 15W-40 / 1L DIESEL MOTOR OIL",
           "VALVOLINE 896783 - 10W-30 / 3L PETROL ENGINE OIL",
           "VALVOLINE 897409 - 10W-30 / 4L PETROL ENGINE OIL",
@@ -314,36 +313,6 @@ export const goodsCategories: GoodsCategory[] = [
           "WURTH DOT - 4 BREAK FLUID 500ML"
         ],
         "logo": "/assets/brands/parts/wurth.png"
-      }
-    ]
-  },
-  {
-    "name": "Air Fresheners",
-    "slug": "air-fresheners",
-    "brands": [
-      {
-        "name": "Dash",
-        "key": "DASH",
-        "items": [
-          "RAIHAN COOL ICE / 40G",
-          "DASH AIR FRESHNER - GEL TRAY / 40G",
-          "DASH AIR POCKET / 10G",
-          "DASH A.F. GEL POCKET - PURE FAST / 10G",
-          "DASH AIR FRESHNER SPRAY BOTTLE / 500ML"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Tissue Boxes",
-    "slug": "tissue-boxes",
-    "brands": [
-      {
-        "name": "Mint",
-        "key": "MINT",
-        "items": [
-          "MINT FACIAL TISSUE 1 BOX"
-        ]
       }
     ]
   }
