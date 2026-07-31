@@ -10,6 +10,7 @@ type BlackFrameProps = {
   sizes?: string;
   aspectClassName?: string;
   style?: CSSProperties;
+  zoom?: boolean;
 };
 
 /** Black box wrapper so uneven banner/service image sizes stay visually consistent. */
@@ -22,10 +23,11 @@ export function BlackFrame({
   sizes = "100vw",
   aspectClassName = "aspect-[21/9]",
   style,
+  zoom = true,
 }: BlackFrameProps) {
   return (
     <div
-      className={`black-frame relative w-full ${aspectClassName} ${className}`}
+      className={`black-frame media-zoom-host relative w-full ${aspectClassName} ${className}`}
       style={style}
     >
       <Image
@@ -34,7 +36,7 @@ export function BlackFrame({
         fill
         priority={priority}
         sizes={sizes}
-        className={imageClassName}
+        className={`${imageClassName} ${zoom ? "media-zoom" : ""}`}
       />
     </div>
   );

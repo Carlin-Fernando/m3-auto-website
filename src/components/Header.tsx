@@ -21,7 +21,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#050505]">
       <div className="flex w-full items-center gap-3 px-3 py-3 sm:px-5 lg:gap-4 lg:px-8">
         {/* Logo — left */}
         <Link

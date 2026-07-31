@@ -24,17 +24,17 @@ export default function ServicesPage() {
           <section
             key={category.slug}
             id={category.slug}
-            className="scroll-mt-28 border border-white/10 bg-surface/60"
+            className="group scroll-mt-28 border border-white/[0.08] bg-surface/60 transition duration-500 hover:border-white/20"
           >
             <div className="grid gap-0 md:grid-cols-[280px_1fr]">
-              <div className="black-frame relative min-h-48 md:min-h-full">
+              <div className="black-frame relative min-h-48 overflow-hidden md:min-h-full">
                 {category.image ? (
                   <Image
                     src={category.image}
                     alt={category.name}
                     fill
                     sizes="280px"
-                    className="object-cover"
+                    className="media-zoom object-cover"
                   />
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />

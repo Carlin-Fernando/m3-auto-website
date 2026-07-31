@@ -11,19 +11,19 @@ export default function HomePage() {
     <>
       <HeroCarousel />
 
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeading
           eyebrow="Specialized Solutions"
           title="Workshop Care Built Around Your Vehicle"
           description="From wash and detailing to brakes, engines, oil service, and diagnostics — practical care with quality parts and lubricants."
         />
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {featuredServices.map((service, index) => (
             <Link
               key={service.id}
               href="/services"
-              className="group reveal border border-white/10 bg-surface transition hover:border-accent-green/40"
+              className="group reveal border border-white/[0.08] bg-surface/80 transition duration-500 hover:border-accent-green/35 hover:bg-surface-elevated"
               style={{ animationDelay: `${index * 70}ms` }}
             >
               <div className="black-frame relative aspect-[4/3] overflow-hidden">
@@ -32,11 +32,11 @@ export default function HomePage() {
                   alt={service.headline}
                   fill
                   sizes="(max-width: 768px) 100vw, 25vw"
-                  className="object-cover transition duration-500 group-hover:scale-105"
+                  className="media-zoom object-cover"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="font-display text-xl tracking-wide text-white">
+              <div className="p-5">
+                <h3 className="font-display text-xl tracking-wide text-white transition group-hover:text-accent-green">
                   {service.headline}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -48,8 +48,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-black/50">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:items-center">
+      <section className="border-y border-white/[0.08] bg-[#050505]">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-2 md:items-center">
           <div>
             <SectionHeading
               eyebrow="Your Vehicle, Our Care"
@@ -58,24 +58,24 @@ export default function HomePage() {
             />
             <Link
               href="/about"
-              className="mt-8 inline-flex border border-white/25 px-5 py-3 text-sm font-semibold uppercase tracking-wider text-white transition hover:border-white hover:bg-white/10"
+              className="btn-ghost mt-8 inline-flex border border-white/25 px-5 py-3 text-sm font-semibold uppercase tracking-wider text-white hover:border-white hover:bg-white/10"
             >
               Read Our Story
             </Link>
           </div>
-          <div className="black-frame relative aspect-[16/11]">
+          <div className="media-zoom-host black-frame relative aspect-[16/11]">
             <Image
               src="/assets/services/img-8.png"
               alt="M3 Auto workshop diagnostics"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
+              className="media-zoom object-cover"
             />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeading
           eyebrow="Trusted Brands"
           title="Lubricants & Spare Parts We Stock"
@@ -83,40 +83,40 @@ export default function HomePage() {
           align="center"
         />
 
-        <div className="mt-10">
-          <p className="mb-4 text-center text-xs uppercase tracking-[0.24em] text-muted">
+        <div className="mt-12">
+          <p className="mb-5 text-center text-xs uppercase tracking-[0.28em] text-muted">
             Lubricants
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-5">
             {lubricantBrands.map((brand) => (
               <BrandLogo key={brand.name} src={brand.logo} alt={brand.name} />
             ))}
           </div>
         </div>
 
-        <div className="mt-12">
-          <p className="mb-4 text-center text-xs uppercase tracking-[0.24em] text-muted">
+        <div className="mt-14">
+          <p className="mb-5 text-center text-xs uppercase tracking-[0.28em] text-muted">
             Spare Parts
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-5">
             {sparePartBrands.map((brand) => (
               <BrandLogo key={brand.name} src={brand.logo} alt={brand.name} />
             ))}
           </div>
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-12 text-center">
           <Link
             href="/parts"
-            className="inline-flex text-sm font-semibold uppercase tracking-wider text-accent-green hover:underline"
+            className="inline-flex text-sm font-semibold uppercase tracking-wider text-accent-green transition hover:tracking-[0.2em]"
           >
             Browse Parts & Lubricants
           </Link>
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-surface">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-14 sm:px-6 md:flex-row md:items-center">
+      <section className="border-t border-white/[0.08] bg-surface">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-16 sm:px-6 md:flex-row md:items-center">
           <div>
             <h2 className="font-display text-3xl tracking-wide text-white sm:text-4xl">
               Ready for a Service?
@@ -128,7 +128,7 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-3">
             <Link
               href="/contact"
-              className="inline-flex bg-accent-red px-5 py-3 text-sm font-semibold uppercase tracking-wider text-white transition hover:brightness-110"
+              className="btn-primary inline-flex bg-accent-red px-5 py-3 text-sm font-semibold uppercase tracking-wider text-white"
             >
               Request Appointment
             </Link>
@@ -136,7 +136,7 @@ export default function HomePage() {
               href={site.whatsapp}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex border border-white/25 px-5 py-3 text-sm font-semibold uppercase tracking-wider text-white transition hover:bg-white/10"
+              className="btn-ghost inline-flex border border-white/25 px-5 py-3 text-sm font-semibold uppercase tracking-wider text-white hover:bg-white/10"
             >
               WhatsApp
             </a>

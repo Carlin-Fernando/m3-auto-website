@@ -54,33 +54,33 @@ export default function AboutPage() {
         </div>
 
         <div className="space-y-4">
-          <div className="black-frame relative aspect-[16/10]">
+          <div className="media-zoom-host black-frame relative aspect-[16/10]">
             <Image
               src="/assets/banners/banner-1.png"
               alt="M3 AUTO brand"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain"
+              className="media-zoom object-contain"
               priority
             />
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <div className="black-frame relative aspect-square">
+            <div className="media-zoom-host black-frame relative aspect-square">
               <Image
                 src="/assets/services/img-5.png"
                 alt="Engine service"
                 fill
                 sizes="25vw"
-                className="object-cover"
+                className="media-zoom object-cover"
               />
             </div>
-            <div className="black-frame relative aspect-square">
+            <div className="media-zoom-host black-frame relative aspect-square">
               <Image
                 src="/assets/services/img-2.png"
                 alt="Car wash"
                 fill
                 sizes="25vw"
-                className="object-cover"
+                className="media-zoom object-cover"
               />
             </div>
           </div>
