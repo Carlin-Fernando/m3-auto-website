@@ -19,7 +19,11 @@ export function HeroCarousel() {
 
   return (
     <section className="relative overflow-hidden border-b border-white/10 bg-black">
-      <div className="relative mx-auto w-full max-w-[1920px] aspect-[21/9] min-h-[220px] sm:min-h-[280px] md:min-h-[360px]">
+      {/*
+        Mobile: taller frame + cover crop from the left so baked logo/slogan is cut off
+        Desktop: wide contain so the full banner (with logo) is visible
+      */}
+      <div className="relative mx-auto w-full max-w-[1920px] h-[min(78vh,640px)] min-h-[420px] md:h-auto md:min-h-[360px] md:aspect-[21/9]">
         <Image
           key={slide.banner}
           src={slide.banner}
@@ -27,18 +31,47 @@ export function HeroCarousel() {
           fill
           priority={index === 0}
           sizes="100vw"
-          className="object-contain object-center brightness-125 contrast-105"
+          className="brightness-125 contrast-105 object-cover object-[78%_center] md:object-contain md:object-center"
         />
 
         {showCopy ? (
           <>
-            {/* Darker veil only behind the copy so the rest of the banner stays bright */}
-            <div className="pointer-events-none absolute left-0 top-0 h-[58%] w-[44%] bg-gradient-to-br from-black/90 via-black/65 to-transparent" />
+            {/* Mobile: bottom-left dark wash for readable copy (logo already cropped out) */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15 md:hidden" />
+            {/* Desktop: upper-left veil only — keep baked logo visible below */}
+            <div className="pointer-events-none absolute left-0 top-0 hidden h-[58%] w-[44%] bg-gradient-to-br from-black/90 via-black/65 to-transparent md:block" />
 
-            {/* Upper-left zone (above baked logo/slogan) */}
             <div className="absolute inset-0 z-10">
-              <div className="flex h-[48%] max-w-[38%] flex-col justify-start px-3 pt-3 sm:px-5 sm:pt-5 md:max-w-[34%] md:px-8 md:pt-7 lg:px-10 lg:pt-8">
-                <div key={slide.id} className="hero-copy-enter">
+              {/* Mobile copy — bottom, full width of safe area */}
+              <div className="flex h-full flex-col justify-end px-4 pb-12 pt-20 md:hidden">
+                <div key={`m-${slide.id}`} className="hero-copy-enter max-w-[20rem]">
+                  <h1 className="font-display text-[1.65rem] leading-[1.1] tracking-wide text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.9)]">
+                    {slide.headline}
+                  </h1>
+                  <div className="stripe mt-2.5 h-0.5 w-16" />
+                  <p className="mt-2.5 text-[0.95rem] leading-relaxed text-white [text-shadow:0_2px_14px_rgba(0,0,0,0.9)]">
+                    {slide.description}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center bg-accent-red px-3.5 py-2 text-xs font-semibold uppercase tracking-wider text-white"
+                    >
+                      Book Appointment
+                    </Link>
+                    <Link
+                      href="/services"
+                      className="inline-flex items-center border border-white/55 bg-black/30 px-3.5 py-2 text-xs font-semibold uppercase tracking-wider text-white"
+                    >
+                      Our Services
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Desktop copy — upper-left above baked brand mark */}
+              <div className="hidden h-[48%] max-w-[38%] flex-col justify-start px-5 pt-5 md:flex md:max-w-[34%] md:px-8 md:pt-7 lg:px-10 lg:pt-8">
+                <div key={`d-${slide.id}`} className="hero-copy-enter">
                   <h1 className="font-display text-[1.49rem] leading-[1.1] tracking-wide text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.9)] sm:text-[1.98rem] md:text-[2.48rem] lg:text-[2.98rem]">
                     {slide.headline}
                   </h1>
@@ -64,9 +97,12 @@ export function HeroCarousel() {
               </div>
             </div>
           </>
-        ) : null}
+        ) : (
+          /* Banner 1: still crop logo side on mobile for a cleaner hero photo */
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:hidden" />
+        )}
 
-        <div className="absolute bottom-3 right-3 z-20 flex flex-wrap justify-end gap-1.5 sm:bottom-5 sm:right-6 sm:gap-2">
+        <div className="absolute bottom-3 left-4 z-20 flex flex-wrap gap-1.5 md:left-auto md:right-6 sm:bottom-5 sm:gap-2">
           {heroSlides.map((item, i) => (
             <button
               key={item.id}
