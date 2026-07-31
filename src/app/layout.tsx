@@ -25,7 +25,11 @@ export const metadata: Metadata = {
   description:
     "M3 AUTO (PVT) LTD — workshop services, cleaning, diagnostics, spare parts and lubricants in Raddolugama. Your car, our care, driven by quality.",
   icons: {
-    icon: "/assets/logos/m3-mark.png",
+    icon: [
+      { url: "/assets/logos/m3-mark.png", type: "image/png" },
+    ],
+    apple: "/assets/logos/m3-mark.png",
+    shortcut: "/assets/logos/m3-mark.png",
   },
 };
 
