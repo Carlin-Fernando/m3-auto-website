@@ -19,31 +19,40 @@ export function HeroCarousel() {
 
   return (
     <section className="relative overflow-hidden border-b border-white/10 bg-black">
-      {/*
-        Mobile: taller frame + cover crop from the left so baked logo/slogan is cut off
-        Desktop: wide contain so the full banner (with logo) is visible
-      */}
-      <div className="relative mx-auto w-full max-w-[1920px] h-[min(78vh,640px)] min-h-[420px] md:h-auto md:min-h-[360px] md:aspect-[21/9]">
+      <div className="relative mx-auto w-full max-w-[1920px] h-[min(82vh,680px)] min-h-[480px] md:h-auto md:min-h-[360px] md:aspect-[21/9]">
+        {/* Mobile-only banners */}
         <Image
-          key={slide.banner}
+          key={`m-${slide.mobileBanner}`}
+          src={slide.mobileBanner}
+          alt={slide.headline}
+          fill
+          priority={index === 0}
+          sizes="100vw"
+          className="object-contain object-center brightness-125 contrast-105 md:hidden"
+        />
+        {/* Desktop banners */}
+        <Image
+          key={`d-${slide.banner}`}
           src={slide.banner}
           alt={slide.headline}
           fill
           priority={index === 0}
           sizes="100vw"
-          className="brightness-125 contrast-105 object-cover object-[78%_center] md:object-contain md:object-center"
+          className="hidden object-contain object-center brightness-125 contrast-105 md:block"
         />
 
         {showCopy ? (
           <>
-            {/* Mobile: bottom-left dark wash for readable copy (logo already cropped out) */}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15 md:hidden" />
-            {/* Desktop: upper-left veil only — keep baked logo visible below */}
+            {/* Soft veil behind mobile copy only (above logo zone) */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-[22%] top-[35%] bg-gradient-to-t from-black/70 via-black/35 to-transparent md:hidden" />
+            {/* Desktop: upper-left veil */}
             <div className="pointer-events-none absolute left-0 top-0 hidden h-[58%] w-[44%] bg-gradient-to-br from-black/90 via-black/65 to-transparent md:block" />
 
             <div className="absolute inset-0 z-10">
-              {/* Mobile copy — bottom, full width of safe area */}
-              <div className="flex h-full flex-col justify-end px-4 pb-12 pt-20 md:hidden">
+              {/*
+                Mobile copy: anchored 30% up from the bottom so baked logo stays clear
+              */}
+              <div className="absolute inset-x-0 bottom-[30%] px-4 md:hidden">
                 <div key={`m-${slide.id}`} className="hero-copy-enter max-w-[20rem]">
                   <h1 className="font-display text-[1.65rem] leading-[1.1] tracking-wide text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.9)]">
                     {slide.headline}
@@ -97,10 +106,7 @@ export function HeroCarousel() {
               </div>
             </div>
           </>
-        ) : (
-          /* Banner 1: still crop logo side on mobile for a cleaner hero photo */
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:hidden" />
-        )}
+        ) : null}
 
         <div className="absolute bottom-3 left-4 z-20 flex flex-wrap gap-1.5 md:left-auto md:right-6 sm:bottom-5 sm:gap-2">
           {heroSlides.map((item, i) => (

@@ -1,6 +1,7 @@
 export type HeroSlide = {
   id: number;
   banner: string;
+  mobileBanner: string;
   serviceImage?: string;
   headline: string;
   description: string;
@@ -10,6 +11,7 @@ export const heroSlides: HeroSlide[] = [
   {
     id: 1,
     banner: "/assets/banners/banner-1.png",
+    mobileBanner: "/assets/banners/mobile/m-banner-1.png",
     headline: "Driven by Quality Care",
     description:
       "Full workshop support in Raddolugama — maintenance, cleaning, diagnostics, and trusted parts under one roof",
@@ -17,6 +19,7 @@ export const heroSlides: HeroSlide[] = [
   {
     id: 2,
     banner: "/assets/banners/banner-2.png",
+    mobileBanner: "/assets/banners/mobile/m-banner-2.png",
     serviceImage: "/assets/services/img-2.png",
     headline: "Body Wash & Undercarriage Care",
     description:
@@ -25,6 +28,7 @@ export const heroSlides: HeroSlide[] = [
   {
     id: 3,
     banner: "/assets/banners/banner-3.png",
+    mobileBanner: "/assets/banners/mobile/m-banner-3.png",
     serviceImage: "/assets/services/img-3.png",
     headline: "Waxing & Paint Protection",
     description:
@@ -33,6 +37,7 @@ export const heroSlides: HeroSlide[] = [
   {
     id: 4,
     banner: "/assets/banners/banner-4.png",
+    mobileBanner: "/assets/banners/mobile/m-banner-4.png",
     serviceImage: "/assets/services/img-4.png",
     headline: "Brake System Specialists",
     description:
@@ -41,6 +46,7 @@ export const heroSlides: HeroSlide[] = [
   {
     id: 5,
     banner: "/assets/banners/banner-5.png",
+    mobileBanner: "/assets/banners/mobile/m-banner-5.png",
     serviceImage: "/assets/services/img-5.png",
     headline: "Engine Service & Repair",
     description:
@@ -49,6 +55,7 @@ export const heroSlides: HeroSlide[] = [
   {
     id: 6,
     banner: "/assets/banners/banner-6.png",
+    mobileBanner: "/assets/banners/mobile/m-banner-6.png",
     serviceImage: "/assets/services/img-6.png",
     headline: "Interior Cleaning & Refresh",
     description:
@@ -57,6 +64,7 @@ export const heroSlides: HeroSlide[] = [
   {
     id: 7,
     banner: "/assets/banners/banner-7.png",
+    mobileBanner: "/assets/banners/mobile/m-banner-7.png",
     serviceImage: "/assets/services/img-7.png",
     headline: "Engine Oil & Filter Service",
     description:
@@ -65,6 +73,7 @@ export const heroSlides: HeroSlide[] = [
   {
     id: 8,
     banner: "/assets/banners/banner-8.png",
+    mobileBanner: "/assets/banners/mobile/m-banner-8.png",
     serviceImage: "/assets/services/img-8.png",
     headline: "Electronic Vehicle Diagnostics",
     description:
