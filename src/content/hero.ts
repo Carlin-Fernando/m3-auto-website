@@ -20,7 +20,7 @@ export const heroSlides: HeroSlide[] = [
     id: 2,
     banner: "/assets/banners/banner-2.png",
     mobileBanner: "/assets/banners/mobile/m-banner-2.png",
-    serviceImage: "/assets/services/img-2.png",
+    serviceImage: "/assets/services/cleaning.png",
     headline: "Body Wash & Undercarriage Care",
     description:
       "Thorough exterior cleaning for cars, SUVs, and vans, including under wash and engine bay cleaning",
@@ -29,7 +29,7 @@ export const heroSlides: HeroSlide[] = [
     id: 3,
     banner: "/assets/banners/banner-3.png",
     mobileBanner: "/assets/banners/mobile/m-banner-3.png",
-    serviceImage: "/assets/services/img-3.png",
+    serviceImage: "/assets/services/car-detailing.png",
     headline: "Waxing & Paint Protection",
     description:
       "Exterior body waxing and finish care that restores shine and helps protect your paintwork",
@@ -38,7 +38,7 @@ export const heroSlides: HeroSlide[] = [
     id: 4,
     banner: "/assets/banners/banner-4.png",
     mobileBanner: "/assets/banners/mobile/m-banner-4.png",
-    serviceImage: "/assets/services/img-4.png",
+    serviceImage: "/assets/services/brake-service.png",
     headline: "Brake System Specialists",
     description:
       "Caliper pin service, pad replacement, washer work, and brake pump care for confident stopping power",
@@ -47,7 +47,7 @@ export const heroSlides: HeroSlide[] = [
     id: 5,
     banner: "/assets/banners/banner-5.png",
     mobileBanner: "/assets/banners/mobile/m-banner-5.png",
-    serviceImage: "/assets/services/img-5.png",
+    serviceImage: "/assets/services/engine.png",
     headline: "Engine Service & Repair",
     description:
       "Tune-ups, mount work, and mechanical engine care to keep performance reliable",
@@ -56,7 +56,7 @@ export const heroSlides: HeroSlide[] = [
     id: 6,
     banner: "/assets/banners/banner-6.png",
     mobileBanner: "/assets/banners/mobile/m-banner-6.png",
-    serviceImage: "/assets/services/img-6.png",
+    serviceImage: "/assets/services/interior-cleaning.png",
     headline: "Interior Cleaning & Refresh",
     description:
       "From cabin vacuum to deep chemical cleaning of seats, dash, glass, hood, and carpets",
@@ -65,7 +65,7 @@ export const heroSlides: HeroSlide[] = [
     id: 7,
     banner: "/assets/banners/banner-7.png",
     mobileBanner: "/assets/banners/mobile/m-banner-7.png",
-    serviceImage: "/assets/services/img-7.png",
+    serviceImage: "/assets/services/engine-oil.png",
     headline: "Engine Oil & Filter Service",
     description:
       "Oil changes and filter replacement for cars, SUVs, vans, and bikes — clean oil, lasting protection",
@@ -74,7 +74,7 @@ export const heroSlides: HeroSlide[] = [
     id: 8,
     banner: "/assets/banners/banner-8.png",
     mobileBanner: "/assets/banners/mobile/m-banner-8.png",
-    serviceImage: "/assets/services/img-8.png",
+    serviceImage: "/assets/services/car-scanning.png",
     headline: "Electronic Vehicle Diagnostics",
     description:
       "Professional scanning to identify faults quickly and guide the right repair the first time",

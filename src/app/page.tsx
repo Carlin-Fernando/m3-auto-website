@@ -65,7 +65,7 @@ export default function HomePage() {
           </div>
           <div className="media-zoom-host black-frame relative aspect-[16/11]">
             <Image
-              src="/assets/services/img-8.png"
+              src="/assets/services/car-scanning.png"
               alt="M3 Auto workshop diagnostics"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

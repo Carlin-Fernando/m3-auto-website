@@ -67,7 +67,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="media-zoom-host black-frame relative aspect-square">
               <Image
-                src="/assets/services/img-5.png"
+                src="/assets/services/engine.png"
                 alt="Engine service"
                 fill
                 sizes="25vw"
@@ -76,7 +76,7 @@ export default function AboutPage() {
             </div>
             <div className="media-zoom-host black-frame relative aspect-square">
               <Image
-                src="/assets/services/img-2.png"
+                src="/assets/services/cleaning.png"
                 alt="Car wash"
                 fill
                 sizes="25vw"

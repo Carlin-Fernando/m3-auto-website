@@ -9,6 +9,7 @@ export const serviceCategories: ServiceCategory[] = [
   {
     "name": "Brake Service",
     "slug": "brake-service",
+    "image": "/assets/services/brake-service.png",
     "subcategories": [
       {
         "name": "Caliper Service",
@@ -41,12 +42,12 @@ export const serviceCategories: ServiceCategory[] = [
           "BREAK PUMP SERVICE AND REPLACEMENT"
         ]
       }
-    ],
-    "image": "/assets/services/img-4.png"
+    ]
   },
   {
     "name": "Transmission",
     "slug": "transmission",
+    "image": "/assets/services/transmission.png",
     "subcategories": [
       {
         "name": "Gear Oil",
@@ -54,12 +55,12 @@ export const serviceCategories: ServiceCategory[] = [
           "GEAR OIL REFILL / CHANGING"
         ]
       }
-    ],
-    "image": "/assets/services/img-7.png"
+    ]
   },
   {
     "name": "Engine",
     "slug": "engine",
+    "image": "/assets/services/engine.png",
     "subcategories": [
       {
         "name": "Engine Oil",
@@ -82,12 +83,12 @@ export const serviceCategories: ServiceCategory[] = [
           "ENGINE MOUNT SERVICE AND REPLACEMENT"
         ]
       }
-    ],
-    "image": "/assets/services/img-5.png"
+    ]
   },
   {
     "name": "Coolant",
     "slug": "coolant",
+    "image": "/assets/services/coolant.png",
     "subcategories": [
       {
         "name": "Coolant",
@@ -96,12 +97,12 @@ export const serviceCategories: ServiceCategory[] = [
           "COOLANT CHANGING"
         ]
       }
-    ],
-    "image": "/assets/services/img-5.png"
+    ]
   },
   {
     "name": "Rack",
     "slug": "rack",
+    "image": "/assets/services/rack.png",
     "subcategories": [
       {
         "name": "Rack",
@@ -110,12 +111,12 @@ export const serviceCategories: ServiceCategory[] = [
           "RACK END REPLACEMENT"
         ]
       }
-    ],
-    "image": "/assets/services/img-5.png"
+    ]
   },
   {
     "name": "CV Joint",
     "slug": "cv-joint",
+    "image": "/assets/services/cv-joint.png",
     "subcategories": [
       {
         "name": "CV Joint",
@@ -124,12 +125,12 @@ export const serviceCategories: ServiceCategory[] = [
           "CV JOINT REPLACEMENT"
         ]
       }
-    ],
-    "image": "/assets/services/img-5.png"
+    ]
   },
   {
     "name": "Suspension",
     "slug": "suspension",
+    "image": "/assets/services/suspension.png",
     "subcategories": [
       {
         "name": "Suspension",
@@ -138,12 +139,12 @@ export const serviceCategories: ServiceCategory[] = [
           "SUSPENSION REPLACEMENT"
         ]
       }
-    ],
-    "image": "/assets/services/img-5.png"
+    ]
   },
   {
     "name": "Cleaning",
     "slug": "cleaning",
+    "image": "/assets/services/cleaning.png",
     "subcategories": [
       {
         "name": "Interior",
@@ -158,24 +159,20 @@ export const serviceCategories: ServiceCategory[] = [
       {
         "name": "Exterior",
         "items": [
-          "FULL BIKE WASH",
           "FULL BIKE WASH WITH WAXING",
-          "BIKE CHAIN REGREASING",
           "CAR BODY WASH",
-          "SUV BODY WASH",
           "VAN BODY WASH",
           "CAR / SUV / VAN UNDER WASH",
           "CAR / SUV / VAN ENGINE ROOM CLEANING",
-          "CAR EXTERIOR BODY WAXING",
-          "SUV EXTERIOR BODY WAXING"
+          "CAR EXTERIOR BODY WAXING"
         ]
       }
-    ],
-    "image": "/assets/services/img-2.png"
+    ]
   },
   {
     "name": "Car Detailing",
     "slug": "car-detailing",
+    "image": "/assets/services/car-detailing.png",
     "subcategories": [
       {
         "name": "Car Detailing",
@@ -184,12 +181,12 @@ export const serviceCategories: ServiceCategory[] = [
           "INTERIOR DETAILING"
         ]
       }
-    ],
-    "image": "/assets/services/img-3.png"
+    ]
   },
   {
     "name": "Car Scanning",
     "slug": "car-scanning",
+    "image": "/assets/services/car-scanning.png",
     "subcategories": [
       {
         "name": "Car Scanning",
@@ -197,7 +194,6 @@ export const serviceCategories: ServiceCategory[] = [
           "CAR SCANNING"
         ]
       }
-    ],
-    "image": "/assets/services/img-8.png"
+    ]
   }
 ];
